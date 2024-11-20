@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predictions</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Model Predictions</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Model Name</th>
+                <th>Prediction</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for model, prediction in predictions.items() %}
+                <tr>
+                    <td>{{ model }}</td>
+                    <td>{{ prediction }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
